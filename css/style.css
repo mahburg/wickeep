@@ -2,7 +2,7 @@
   box-sizing: border-box;
 }
 nav{
-  height: 100px;
+  height: 80px;
   display: flex;
   align-items: center;
 }
@@ -18,13 +18,16 @@ nav{
   font-size: 11px;
   font-weight: bold;
   letter-spacing: 2px;
+  display: none;
 }
 .sec1{
   background-color: black;
   width: 100%;
-  height: 800px;
+  height: 500px;
   display: flex;
   justify-content: center;
+  background-image: url('../REF/Wickeep_files/IMG_1588.jpg');
+  background-size: cover;
 }
 .nav_buttons{
   color: white;
@@ -52,13 +55,29 @@ nav{
   width: 80%;
   text-align: center;
 }
+.about_text{
+  color: darkslategray;
+  column-count: 2;
+  column-fill: balance;
+}
 .sec3{
-  background-image: url(img/mtn_view_stylized.jpg);
+  background-image: url("../img/mtn_view_stylized.jpg");
+  background-size: cover;
   height: 500px;
+  
   /*background-color: red;*/
 }
-@media (max-width: 639px){
+footer{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+}
+.copyright{
+  color: darkslategrey;
+}
+@media (min-width: 639px){
   .dscrptn{
-    display: none;
+    display: block;
   }
 }
