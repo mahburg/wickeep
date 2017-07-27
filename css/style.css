@@ -1,16 +1,24 @@
 *{
   box-sizing: border-box;
+  margin: 0;
 }
-nav{
-  height: 80px;
+body{
+  padding-top: 50px;
+}
+.nav-bar{
+  width: 100%;
+  margin-top: -50px;
+  padding: 0 20px;
+  background: white;
+  position: fixed;
+  height: 50px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 }
 .comp_name{
   font-family: sans-serif;
-  font-size: 28px;
-  margin-left: 50px;
-  margin-right: 25px;
+  font-size: 22px;
   font-weight: 500;
 }
 .dscrptn{
@@ -20,35 +28,59 @@ nav{
   letter-spacing: 2px;
   display: none;
 }
+.ham{
+  width: 22px;
+  height: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.ham-sub{
+  width: 100%;
+  height: 2px;
+  background-color: black;
+}
 .sec1{
   background-color: black;
   width: 100%;
-  height: 500px;
+  height: 250px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   background-image: url('../REF/Wickeep_files/IMG_1588.jpg');
   background-size: cover;
+  /* position: fixed;
+  z-index: -5; */
 }
 .nav_buttons{
-  color: white;
-  font-size: 11px;
-  letter-spacing: 3px;
+  display: none;
+}
+.nav_buttons ul{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
 }
 .nav_button{
-  display: inline-block;
-  margin: 0px 5px;
+  list-style: none;
+  margin-top: 55px;
+}
+.hero{
+  width: 95vw;
+  height: 95vw;
 }
 .sec2{
   width: 100%;
-  height: 300px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  padding-top: 75px;
+  padding: 25px 0;
+  background: white;
+  /* margin-top: 250px; */
 }
 .about_span{
   font-family: sans-serif;
   font-weight: 600;
+  text-align: center;
 }
 .wic_intro{
   margin-top: 20px;
@@ -57,27 +89,97 @@ nav{
 }
 .about_text{
   color: darkslategray;
-  column-count: 2;
   column-fill: balance;
 }
-.sec3{
+.pic2{
   background-image: url("../img/mtn_view_stylized.jpg");
   background-size: cover;
-  height: 500px;
-  
-  /*background-color: red;*/
+  background-position: center;
+  height: 250px;
+}
+.sec3{
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  align-items: center;
+  margin: 10px 0;
+}
+.contact-message{
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: 600;
+}
+.contact-form{
+  display: flex;
+  flex-direction: column;
+}
+.contact-group{
+  display: flex;
+  flex-direction: column;
+  margin: 10px 0;
+}
+.contact-group input{
+  border: none;
+  border-bottom: 1px solid grey;
 }
 footer{
+  background: #333;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 60px;
 }
 .copyright{
-  color: darkslategrey;
+  color: lightgray;
 }
-@media (min-width: 639px){
+@media (min-width: 700px){
+  body{
+    padding-top: 80px;
+  }
+  .nav-bar{
+    margin-top: -80px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+  .comp_name{
+    font-size: 28px;
+    margin-left: 50px;
+    margin-right: 25px;
+    font-weight: 500;
+  }
   .dscrptn{
     display: block;
+  }
+  .ham{
+    display: none;
+  }
+  .sec1{
+    height: 400px;
+  }
+  .nav_buttons{
+    display: flex;
+    width: 100%;
+    padding: 10px 30px;
+    color: white;
+    font-size: 12px;
+    letter-spacing: 3px;
+  }
+  .nav_button a{
+    text-decoration: none;
+    color: white;
+  }
+  .about_text{
+    color: darkslategray;
+    column-count: 2;
+    column-fill: balance;
+  }
+  .pic2{
+    height: 500px;
+  }
+  .sec3{
+    display: flex;
+    justify-content: space-around;
   }
 }
