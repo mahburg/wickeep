@@ -1,0 +1,18 @@
+<div>
+    <header class="admin-header">
+        <h3>WICKEEP Admin</h3>
+        <p ui-sref="home">Home</p>
+    </header>
+    <div class="admin-content">
+        <div class="admin-sidebar">
+            <div class="side-nav">
+                <div class="navlink" ui-sref="admin.content">Page Content</div>
+                <div class="navlink" ui-sref="admin.blogs">Blogs</div>
+                <div class="navlink" ui-sref="admin.addblog">Add Blog Post</div>
+            </div>
+        </div>
+        <div class="admin-route">
+            <ui-view></ui-view>
+        </div>
+    </div>
+</div>

@@ -1,80 +1,27 @@
 <!DOCTYPE html>
-<html ng-app="app">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-    <link rel="stylesheet" href="./css/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Cabin+Condensed:600" rel="stylesheet">
-    <title>Wickeep</title>
-  </head>
-  <body>
-    <header class="nav-bar">
-      <h2 class="comp_name">W I C K E E P</h2>
-      <h4 class="dscrptn">BOOKKEEPING FOR PHYSICAL AND OCCUPATION THERAPY</h4>
-      <div class="ham">
-        <div class="ham-sub"></div>
-        <div class="ham-sub"></div>
-        <div class="ham-sub"></div>
-      </div>
-    </header>
-    <section class="sec1" id="home-sec">
-      <nav class="nav_buttons">
-        <ul>
-          <li class="nav_button"><a href="#home-sec">HOME</a></li>
-          <li class="nav_button"><a href="#about-sec">ABOUT</a></li>
-          <li class="nav_button"><a href="#contact-sec">CONTACT US</a></li>
-          <li class="nav_button"><a href="">BLOG</a></li>
-        </ul>
-      </nav>
-       <img class="hero" src="./img/wiclogo.png" alt=""> 
-    </section>
+<html lang='en' ng-app='app'>
+    <head>
+        <title>Wickeep</title>
+        <meta charset='UTF-8'>
+        <meta name='viewport' content='width=device-width, initial-scale=1'>
+        <link href='./app/views/main/style.css' rel='stylesheet'>
+        <link href='./app/views/blog/blog.css' rel='stylesheet'>
+        <link href='./app/views/admin/admin.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
+    <body>
 
-    <section class="sec2">
-      <span class="about_span" id="about-sec">ABOUT US</span>
-      <div class="wic_intro">
-        <p class="about_text">Are you a Therapist looking for a way to elevate your business practice?
-          <br>Do you need someone who has your best interest at heart? Have you struggled to start or continue your practice because of finances?
-          <br>
-          I help Physical and Occupational Therapists improve their finances.
-          <br>
-          You’re a Therapist not a bookkeeper. You want to focus on your job and your passion.
-          <br>          
-          I am a bookkeeper and a business owner. I want to do your bookkeeping and help improve the business portion of your practice so you can keep doing what you are good at. 
-          <br>          
-          I’d love to help you and be your bookkeeper.
-        </p>
-      </div>
-    </section>
-    <div class="pic2">
-    </div>
-    <div class="sec3">
-      <h4 class="contact-message">
-        Please leave your info here if you would like us to contact you.
-      </h4>
-      <div class="contact-container" id="contact-sec">
-        <form class="contact-form">
-          <div class="contact-group">
-            <label>Name</label>
-            <input type="text" name="name" placeholder="First Last">
-          </div>
-          <div class="contact-group">
-            <label>Email</label>
-            <input type="text" name="email" placeholder="email@mail.com">
-          </div>
-          <div class="contact-group">
-            <label>Phone</label>
-            <input type="text" name="phone" placeholder="801-555-1234">
-          </div>
-          <button type="submit">Submit</button>
-        </form>
-      </div>
-    </div>
-    <footer>
-      <p class="copyright">Copyright 2017 Wickeep - Website by Lloyd Grubham</p>
-    </footer>
+        <ui-view></ui-view>
+        
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 
-    <script>src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"</script>
+        <script src="./app/app.js"></script>
 
-  </body>
+        <script src="./app/views/main/mainCtrl.js"></script>
+        <script src="./app/views/blog/blogCtrl.js"></script>
+        <script src="./app/views/admin/adminCtrl.js"></script>
+
+        <script src="./app/views/blog/blog-dir.js"></script>
+    </body>
 </html>

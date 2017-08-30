@@ -1,0 +1,21 @@
+<div>
+    <header class="blog-header">
+        <h3>WICKEEP Blog</h3>
+        <p ui-sref="home">Home</p>
+        <div>
+            <label>Search blog posts</label>
+            <input type="text" placeholder="search">
+        </div>
+    </header>
+
+    <div class="blogs-main">
+        <div class="blog-list">
+            <div ng-repeat="blogItem in blogs">
+                <blog-dir blog="blogItem"></blog-dir>         
+            </div>      
+        </div>
+        <div class="blog-sidebar">
+            Sidebar
+        </div>
+    </div>
+</div>
