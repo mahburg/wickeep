@@ -55,7 +55,7 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../REF/Wickeep_files/IMG_1588.jpg');
+  background-image: url('../../../REF/Wickeep_files/IMG_1588.jpg');
   background-size: cover;
   /* position: fixed;
   z-index: -5; */
@@ -104,7 +104,7 @@ button {
   margin-top: 10px;
 }
 .pic2{
-  background-image: url("../img/mtn_view_stylized.jpg");
+  background-image: url("../../../img/mtn_view_stylized.jpg");
   background-size: cover;
   background-position: center;
   height: 250px;
