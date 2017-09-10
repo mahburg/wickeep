@@ -1,0 +1,27 @@
+{
+  "name": "wickeep",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mahburg/wickeep.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mahburg/wickeep/issues"
+  },
+  "homepage": "https://github.com/mahburg/wickeep#readme",
+  "dependencies": {
+    "body-parser": "^1.18.0",
+    "cors": "^2.8.4",
+    "express": "^4.15.4",
+    "massive": "^4.0.0",
+    "passport": "^0.4.0"
+  }
+}
