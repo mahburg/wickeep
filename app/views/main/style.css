@@ -5,6 +5,10 @@
 body{
   padding-top: 50px;
 }
+a{
+  text-decoration: none;
+  color: inherit;
+}
 button {
   background-color: #333;
   color: white;
@@ -23,6 +27,22 @@ button {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  box-shadow: 1px 0px 6px 0px rgba(200,200,200,0.5);
+  z-index: 10;
+}
+.mobile-nav{
+  position: fixed;
+  width: 100%;
+  background-color: white;
+}
+.mobile-nav-item{
+  font-family: sans-serif;
+  padding: 15px 10px;
+  border-bottom: 1px solid #EEE;
+  width: 100%;
+}
+.mobile-nav-item:hover{
+  background-color: gray;
 }
 .comp_name{
   font-family: sans-serif;
@@ -36,18 +56,6 @@ button {
   letter-spacing: 2px;
   display: none;
 }
-.ham{
-  width: 22px;
-  height: 16px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-.ham-sub{
-  width: 100%;
-  height: 2px;
-  background-color: black;
-}
 .sec1{
   background-color: black;
   width: 100%;
@@ -55,20 +63,20 @@ button {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-image: url('../../../REF/Wickeep_files/IMG_1588.jpg');
+  align-items: center;
+  background-image: url('../../../img/BlackandWhiteCandles.jpg');
   background-size: cover;
   /* position: fixed;
   z-index: -5; */
 }
 .nav_buttons{
   display: none;
-}
-.nav_buttons ul{
-  width: 100%;
+  width: 80%;
   display: flex;
   justify-content: space-between;
 }
 .nav_button{
+  cursor: pointer;
   list-style: none;
   /* margin-top: 55px; */
 }
@@ -107,7 +115,7 @@ button {
   background-image: url("../../../img/mtn_view_stylized.jpg");
   background-size: cover;
   background-position: center;
-  height: 250px;
+  height: 200px;
 }
 .sec3{
   display: flex;
@@ -138,14 +146,42 @@ button {
 footer{
   background: #333;
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
   height: 60px;
+}
+.social-links{
+  display: flex;
+  height: 100%;
+  align-items: center;
+}
+.social-icon{
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  margin: 0 10px;
+  border: 3px solid white;
+}
+/* .facebook{
+  background-color: #0C0CAE;
+}
+.instagram{
+  background-color: #DD3DB6;
+}
+.linkedin{
+  background-color: #00A391;
+} */
+.email{
+  color: lightgray;
 }
 .copyright{
   color: lightgray;
 }
-@media (min-width: 700px){
+@media (min-width: 733px){
   body{
     padding-top: 80px;
   }
@@ -172,9 +208,9 @@ footer{
     height: 400px;
   }
   .nav_buttons{
+    /* width: 100%; */
     display: flex;
-    width: 100%;
-    padding: 10px 30px;
+    padding: 10px 0;
     color: white;
     font-size: 12px;
     letter-spacing: 3px;
@@ -186,8 +222,11 @@ footer{
   .wic_intro{
     grid-template-columns: 1fr 1fr;
   }
+  .about_text{
+    margin: 0 10px;
+  }
   .pic2{
-    height: 500px;
+    height: 400px;
   }
   .sec3{
     display: flex;

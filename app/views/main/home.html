@@ -1,20 +1,21 @@
 <header class="nav-bar">
     <h2 class="comp_name">W I C K E E P</h2>
     <h4 class="dscrptn">BOOKKEEPING FOR PHYSICAL AND OCCUPATIONAL THERAPY</h4>
-    <div class="ham">
-        <div class="ham-sub"></div>
-        <div class="ham-sub"></div>
-        <div class="ham-sub"></div>
+    <div class="ham" ng-click="toggleNav()">
+        <i class="fa fa-bars fa-lg"></i>
     </div>  
 </header>
+<div class="mobile-nav" ng-show="showNav">
+    <div class="mobile-nav-item" ng-click="scrollTo('about-sec')">ABOUT</div>
+    <div class="mobile-nav-item" ng-click="scrollTo('contact-sec')">CONTACT</div>
+    <div class="mobile-nav-item" ui-sref="blog">BLOG</div>
+</div>
 <section class="sec1" id="home-sec">
     <nav class="nav_buttons">
-        <ul>
-            <li class="nav_button"><a ui-sref="/">HOME</a></li>
-            <li class="nav_button"><a href="#about-sec">ABOUT</a></li>
-            <li class="nav_button"><a href="#contact-sec">CONTACT US</a></li>
-            <li class="nav_button"><a ui-sref="blog">BLOG</a></li>
-        </ul>
+        <!-- <div class="nav_button"><a ui-sref="/">HOME</a></div> -->
+        <div class="nav_button" ng-click="scrollTo('about-sec')">ABOUT</div>
+        <div class="nav_button" ng-click="scrollTo('contact-sec')">CONTACT US</div>
+        <div class="nav_button" ui-sref="blog">BLOG</div>
     </nav>
     <img class="hero" src="./img/full-logo.svg" alt="">
 </section>
@@ -62,17 +63,16 @@
 </div>
 <footer>
     <div class="social-links">
-        <div>
+        <div class="social-icon linkedin">
             <i class="fa fa-linkedin"></i>
         </div>
-        <div>
+        <div class="social-icon facebook">
             <i class="fa fa-facebook"></i>
         </div>
-        <div>
+        <div class="social-icon instagram">
             <i class="fa fa-instagram"></i>
         </div>
     </div>
-    <div class="email"></div>
-    <div class="copyright"></div>
-    <p class="copyright">Copyright 2017 Wickeep - Website by Lloyd Grubham</p>
+    <div class="email">help@wickeep.com</div>
+    <p class="copyright">Copyright 2017 Wickeep - <a href="http://www.lloydgrubham.com">Website by Lloyd Grubham</a></p>
 </footer>
