@@ -32,7 +32,7 @@ angular.module('app',['ui.router'])
         })
         .state('admin.addblog',{
             url: '/addblog',
-            templateUrl: './app/views/admin/addblog.html',
+            templateUrl: './app/views/admin/addBlog.html',
             controller: 'addBlogCtrl'
         })
         .state('admin.blogs',{
