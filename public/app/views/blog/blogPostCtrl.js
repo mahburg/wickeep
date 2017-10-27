@@ -10,9 +10,10 @@ angular.module('app').controller('blogPostCtrl', function ($scope, $stateParams,
     }  
     function getBlog() {
         let id = $stateParams.id;
-        console.log('id', id);
         blogSrv.getBlog(id).then(function (response) {
-            console.log(response.data);
+            let blog = response.data[0];
+            let contentArr = blog.content.split('\n')
+            blog.contentArr = contentArr;
             $scope.blog = response.data[0]
         })
         getTags(id)        

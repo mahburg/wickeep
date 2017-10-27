@@ -1,17 +1,23 @@
 <div class="blog-list">
     <h1></h1>
     <div>
-        <table>
-            <tr>
-                <th>Title</th>
-                <th>Author</th>
-                <th>Date Posted</th>
-            </tr>
-            <tr ng-repeat="blog in blogs">
-                <td>{{blog.title}}</td>
-                <td>{{blog.author || 'N/A'}}</td>
-                <td>{{blog.created_ts}}</td>
-            </tr>
-        </table>
+        <div class="table">
+            <div class="table-header table-row">
+                <div class="table-cell">
+                    <input type="checkbox" name="" id="">
+                </div>
+                <div class="table-cell">Title</div>
+                <div class="table-cell">Author</div>
+                <div class="table-cell">Date Posted</div>
+            </div>
+            <div ng-repeat="blog in blogs" class="table-row table-list-row">
+                <div class="table-cell">
+                    <input type="checkbox" name="" id="">
+                </div>
+                <div class="table-cell">{{blog.title}}</div>
+                <div class="table-cell">{{blog.audivor || 'N/A'}}</div>
+                <div class="table-cell">{{blog.created_ts}}</div>
+            </div>
+        </div>
     </div>
 </div>

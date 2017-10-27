@@ -28,7 +28,6 @@
 .blog-header {
   font-family: sans-serif;
   margin-top: -80px;
-  margin-bottom: 10px;
   height: 60px;
   background-color: black;
   color: white;
@@ -65,4 +64,36 @@
 }
 .nav-link:hover{
   color: #AAA;
+}
+
+.blog-container{
+  width: 100%;
+  display: grid;
+  grid-gap: 15px;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  padding: 25px;
+}
+.blog-hero{
+  width: 100%;
+}
+
+.tag-container{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: left;
+}
+
+.tag-tile{
+  padding: 5px;
+  background-color: #444;
+  color: white;
+  border-radius: 5px;
+  margin: 3px;
+  cursor: pointer;
+}
+
+.tag-tile:hover{
+  background-color: #222;
 }

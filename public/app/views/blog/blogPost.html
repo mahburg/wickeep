@@ -2,15 +2,18 @@
     <h3 class="nav-link" ui-sref="blog.search">WICKEEP Blog</h3>
     <p class="nav-link" ui-sref="home">Home</p>
     <div>
-        <label>Search blog posts</label>
+        <label>Search Blog</label>
         <input ng-model="search" type="text" placeholder="search">
     </div>
 </header>
-<div>
+<img class="blog-hero" src="https://unsplash.it/900/250/?random" alt="">
+<div class="blog-container">
     <h2>{{blog.title}}</h2>
     <h4>{{blog.author}}</h4>
-    <p>{{blog.content}}</p>
-    <ul>
-        <li ng-repeat="tag in tags">{{tag.tag}}</li>
-    </ul>
+    <p ng-repeat="p in blog.contentArr track by $index">{{p}}</p>
+    
+    <div class="tag-container">
+        <a class="tag-tile" ng-repeat="tag in tags">{{tag.tag}}</a>
+    </div>
+
 </div>

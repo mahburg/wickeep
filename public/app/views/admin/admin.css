@@ -72,6 +72,8 @@
     display: flex;
     flex-direction: column;
     width: 90%;
+    padding: 15px;
+    box-shadow: 1px 1px 1px 1px rgba(20, 20, 20, 0.4);    
 }
 .content-tile img{
     width: min-content;
@@ -81,4 +83,33 @@
     width: 100%;
     height: 100px;
     resize: none;
+}
+
+.table{
+    margin-top: 15px;
+    border: 1px solid #555;
+}
+.table-row{
+    display: grid;
+    grid-template-columns: 30px repeat(3, 1fr);
+}
+.table .table-list-row:nth-child(2n){
+    background-color: #DDD;
+}
+.table .table-list-row:nth-child(2n):hover{
+    background-color: #AAA;
+}
+.table-list-row:hover{
+    background-color: #BBB;
+}
+.table-header{
+    font-weight: bold;
+    color: white;
+    background-color: #111;
+}
+
+.table-cell{
+    padding: 3px;
+    display: flex;
+    align-items: center;
 }
