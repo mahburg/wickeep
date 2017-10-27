@@ -1,0 +1,16 @@
+<header class="blog-header">
+    <h3 class="nav-link" ui-sref="blog.search">WICKEEP Blog</h3>
+    <p class="nav-link" ui-sref="home">Home</p>
+    <div>
+        <label>Search blog posts</label>
+        <input ng-model="search" type="text" placeholder="search">
+    </div>
+</header>
+<div>
+    <h2>{{blog.title}}</h2>
+    <h4>{{blog.author}}</h4>
+    <p>{{blog.content}}</p>
+    <ul>
+        <li ng-repeat="tag in tags">{{tag.tag}}</li>
+    </ul>
+</div>

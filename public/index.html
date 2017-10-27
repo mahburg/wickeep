@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang='en' ng-app='app'>
-    <head>
-        <title>Wickeep</title>
-        <meta charset='UTF-8'>
-        <meta name='viewport' content='width=device-width, initial-scale=1'>
-        <link href='./app/views/main/style.css' rel='stylesheet'>
-        <link href='./app/views/blog/blog.css' rel='stylesheet'>
-        <link href='./app/views/admin/admin.css' rel='stylesheet'>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    </head>
-    <body>
+<head>
+    <title>Wickeep</title>
+    <meta charset='UTF-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link href='./app/views/main/style.css' rel='stylesheet'>
+    <link href='./app/views/blog/blog.css' rel='stylesheet'>
+    <link href='./app/views/admin/admin.css' rel='stylesheet'>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
 
-        <ui-view></ui-view>
-        
-        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
+    <ui-view></ui-view>
 
-        <script src="./app/app.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/1.0.3/angular-ui-router.js"></script>
 
-        <script src="./app/views/main/mainCtrl.js"></script>
-        <script src="./app/views/blog/blogCtrl.js"></script>
-        <script src="./app/views/admin/adminCtrl.js"></script>
+    <script src="./app/app.js"></script>
 
-        <script src="./app/views/blog/blog-dir.js"></script>
-    </body>
+    <script src="./app/views/main/mainCtrl.js"></script>
+    <script src="./app/views/blog/blogSearchCtrl.js"></script>
+    <script src="./app/views/blog/blogPostCtrl.js"></script>
+    <script src="./app/views/blog/blogSrv.js"></script>
+    <script src="./app/views/admin/adminCtrl.js"></script>
+    <script src="./app/views/admin/adminSrv.js"></script>
+    <script src="./app/views/admin/addBlogCtrl.js"></script>
+    <script src="./app/views/admin/adminBlogCtrl.js"></script>
+
+    <script src="./app/views/blog/blog-tile-dir.js"></script>
+</body>
 </html>

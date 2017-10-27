@@ -1,56 +1,68 @@
-.blog-tile{
-    margin-bottom: 10px;
-    width: 90%;
-    padding: 15px;
-    border-radius: 5px;
-    border: 1px solid #AAA;
-  }
-  .title-area{
-    width: 100%;
-    padding-bottom: 15px;
-    display: flex;
-    justify-content: center;
-    /* border-bottom: 1px solid black; */
-  }
-  .content-area{
-    display: flex;
-    
-  }
-  .text-area{
-    padding-left: 15px;
-  }
-  
-  .blog-header{
-    font-family: sans-serif;
-    margin-top: -80px;
-    margin-bottom: 10px;
-    height: 60px;
-    background-color: black;
-    color: white;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-  }
-  
-  .blogs-main{
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    padding-top: 15px;
-  }
-  
-  .blog-list{
-    width: 100%;
-    padding: 0 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .blog-description{
-    margin-top: 10px;
-  }
-  .blog-sidebar{
-    background-color: red;
-    position: fixed;
-    right: 14px;
-    /* top: 80px; */
-  }
+.blog-tile {
+  margin-bottom: 10px;
+  width: 90%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 1px solid #AAA;
+}
+
+.title-area {
+  width: 100%;
+  padding-bottom: 15px;
+  display: flex;
+  justify-content: center;
+  /* border-bottom: 1px solid black; */
+}
+.title-area h2{
+  cursor: pointer;
+}
+
+.content-area {
+  display: flex;
+}
+
+.text-area {
+  padding-left: 15px;
+}
+
+.blog-header {
+  font-family: sans-serif;
+  margin-top: -80px;
+  margin-bottom: 10px;
+  height: 60px;
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.blogs-main {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding-top: 15px;
+}
+
+.blog-list {
+  width: 100%;
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.blog-description {
+  margin-top: 10px;
+}
+
+.blog-sidebar {
+  background-color: red;
+  position: fixed;
+  right: 14px;
+  /* top: 80px; */
+}
+.nav-link{
+  cursor: pointer;
+}
+.nav-link:hover{
+  color: #AAA;
+}

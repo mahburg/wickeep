@@ -1,0 +1,19 @@
+<header class="blog-header">
+    <h3 class="nav-link" ui-sref="blog.search">WICKEEP Blog</h3>
+    <p class="nav-link" ui-sref="home">Home</p>
+    <div>
+        <label>Search blog posts</label>
+        <input ng-model="search" type="text" placeholder="search">
+    </div>
+</header>
+
+<div class="blogs-main">
+    <div class="blog-list">
+        <div ng-repeat="blogItem in blogs | filter: search">
+            <blog-tile-dir blog="blogItem"></blog-tile-dir>
+        </div>
+    </div>
+    <div class="blog-sidebar">
+        Sidebar
+    </div>
+</div>

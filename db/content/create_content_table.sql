@@ -1,5 +1,5 @@
-CREATE TABLE content (
+CREATE TABLE page_content (
     id SERIAL PRIMARY KEY,
-    title TEXT,
-    url TEXT
+    content_type VARCHAR,
+    val TEXT
 )

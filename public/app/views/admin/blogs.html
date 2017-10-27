@@ -1,0 +1,17 @@
+<div class="blog-list">
+    <h1></h1>
+    <div>
+        <table>
+            <tr>
+                <th>Title</th>
+                <th>Author</th>
+                <th>Date Posted</th>
+            </tr>
+            <tr ng-repeat="blog in blogs">
+                <td>{{blog.title}}</td>
+                <td>{{blog.author || 'N/A'}}</td>
+                <td>{{blog.created_ts}}</td>
+            </tr>
+        </table>
+    </div>
+</div>

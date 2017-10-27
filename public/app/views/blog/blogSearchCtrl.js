@@ -1,4 +1,5 @@
-angular.module('app').controller('blogCtrl', function($scope){
+angular.module('app').controller('blogSearchCtrl', function($scope, blogSrv){
+    $scope.search = '';
     $scope.blogs = [
         {
             title: 'How to get a free Website',
@@ -19,4 +20,11 @@ angular.module('app').controller('blogCtrl', function($scope){
             author: "Joe Sedgwick"
         }
     ]
+    
+    function getBlogs() {
+        blogSrv.getBlogs().then(function(response) {
+            $scope.blogs = response.data;
+        })
+    }
+    getBlogs()
 });
