@@ -1,23 +1,37 @@
 <div class="blog-list">
-    <h1></h1>
-    <div>
-        <div class="table">
-            <div class="table-header table-row">
-                <div class="table-cell">
-                    <input type="checkbox" name="" id="">
-                </div>
-                <div class="table-cell">Title</div>
-                <div class="table-cell">Author</div>
-                <div class="table-cell">Date Posted</div>
+    <br>
+    <h1>Blog Posts</h1>
+
+    <div class="table">
+        <div class="table-header table-row">
+            <div class="table-cell">
+                <input ng-click="selectAll()" ng-model="checkAll" type="checkbox" name="" id="">
             </div>
-            <div ng-repeat="blog in blogs" class="table-row table-list-row">
-                <div class="table-cell">
-                    <input type="checkbox" name="" id="">
-                </div>
-                <div class="table-cell">{{blog.title}}</div>
-                <div class="table-cell">{{blog.audivor || 'N/A'}}</div>
-                <div class="table-cell">{{blog.created_ts}}</div>
+            <div class="table-cell">Title</div>
+            <div class="table-cell">Author</div>
+            <div class="table-cell">Publishded</div>
+            <div class="table-cell">Date Posted</div>
+        </div>
+        <div ng-repeat="blog in blogs" class="table-row table-list-row">
+            <div class="table-cell">
+                <input type="checkbox" ng-click="selectBlog()" ng-model="blog.selected">
             </div>
+            <div class="table-cell">{{blog.title}}</div>
+            <div class="table-cell">{{blog.author || 'N/A'}}</div>
+            <div class="table-cell">{{blog.published ? 'Yes': 'No'}}</div>
+            <div class="table-cell">{{blog.created_ts}}</div>
         </div>
     </div>
+    <div class="button-box">
+        <div class="button-left">
+            <button ng-click="edit(blog.id)" ng-disabled="checkCount != 1">Edit</button>
+            <button ng-click="delete(blog.id)" ng-disabled="checkCount != 1">Delete</button>
+        </div>
+        <div class="button-right">
+            <label> Bulk Actions:</label>
+            <button ng-click="publish()" ng-disabled="!checkAll">Publish</button>
+            <button ng-click="unpublish()" ng-disabled="!checkAll">Unpublish</button>
+        </div>
+    </div>
+
 </div>

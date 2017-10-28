@@ -22,7 +22,9 @@ angular.module('app').controller('blogSearchCtrl', function($scope, blogSrv){
     ]
     
     function getBlogs() {
+        console.log('getting')
         blogSrv.getBlogs().then(function(response) {
+            console.log(response.data)
             $scope.blogs = response.data;
         })
     }

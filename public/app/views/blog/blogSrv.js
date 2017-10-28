@@ -2,7 +2,7 @@ angular.module('app').service('blogSrv', function($http){
     this.getBlogs = function() {
         return $http({
             method: "GET",
-            url: '/api/blogs'
+            url: '/api/blogs/published'
         })
     }
     this.getBlog = function(id) {

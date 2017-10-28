@@ -1,15 +1,21 @@
 exports = module.exports = {}
 
-exports.addBlog = function(req, res) {
+exports.addBlog = function (req, res) {
     let db = req.app.get('db');
-    let {title, author, content, pic1, tags} = req.body;
+    let {
+        title,
+        author,
+        content,
+        pic1,
+        tags
+    } = req.body;
 
     // Add async await?
-    db.blog.post_blog([title, author, content, pic1]).then(resp=>{
+    db.blog.post_blog([title, author, content, pic1]).then(resp => {
         let blogId = resp[0].id;
-        tags.forEach((tag)=> {
-            db.blog.post_tag(tag).then(response=>{
-                db.blog.get_tag_id(tag).then(idResp=>{
+        tags.forEach((tag) => {
+            db.blog.post_tag(tag).then(response => {
+                db.blog.get_tag_id(tag).then(idResp => {
                     let id = idResp[0].id;
                     db.blog.post_blog_tag([blogId, id])
                 }).catch(console.log)
@@ -19,41 +25,60 @@ exports.addBlog = function(req, res) {
     }).catch(console.log)
 }
 
-exports.getBlogs = function(req,res) {
+exports.getBlogs = function (req, res) {
     let db = req.app.get('db');
-    db.blog.get_all_blogposts().then(resp=>{
+    db.blog.get_all_blogposts().then(resp => {
         res.status(200).send(resp);
     })
 }
 
-exports.getBlog = function(req,res) {
+exports.getPublishedBlogs = function (req, res) {
     let db = req.app.get('db');
-    db.blog.get_blogpost_by_id([req.params.id]).then(resp=>{
+    console.log('published...')
+    db.blog.get_published_blogs().then(resp => {
         res.status(200).send(resp);
     })
 }
 
-exports.editBlog = function(req,res) {
+exports.getBlog = function (req, res) {
     let db = req.app.get('db');
-    db.blog.update_blogpost([]).then(resp=>{
+    db.blog.get_blogpost_by_id([req.params.id]).then(resp => {
+        res.status(200).send(resp);
+    })
+}
+
+exports.editBlog = function (req, res) {
+    let db = req.app.get('db');
+    db.blog.update_blogpost([]).then(resp => {
         res.status(200).send(resp);
     })
     res.status(200).send('bene')
 }
 
-exports.deleteBlog = function(req,res) {
+exports.deleteBlog = function (req, res) {
     let db = req.app.get('db');
-    db.blog.delete_blogpost([]).then(resp=>{
+    db.blog.delete_blogpost([req.params.id]).then(resp => {
         res.status(200).send(resp);
     })
-    res.status(200).send('bene')
 }
 
-exports.getBlogTags = function(req, res) {
+exports.getBlogTags = function (req, res) {
     let db = req.app.get('db');
     console.log('getting tags');
-    db.blog.get_blog_tags([req.params.id]).then(resp=>{
+    db.blog.get_blog_tags([req.params.id]).then(resp => {
         console.log(resp)
         res.status(200).send(resp);
     }).catch(console.log)
+}
+
+exports.publish = async function (req, res) {
+    let db = req.app.get('db');
+    console.log(req.body)
+    try {
+        for (let i = 0; i < req.body.length; i++) {
+            await db.blog.publish_blog(req.body)
+        }
+    } catch (err) {
+        console.log(err)
+    }
 }

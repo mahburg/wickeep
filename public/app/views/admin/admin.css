@@ -85,13 +85,14 @@
     resize: none;
 }
 
+
 .table{
     margin-top: 15px;
     border: 1px solid #555;
 }
 .table-row{
     display: grid;
-    grid-template-columns: 30px repeat(3, 1fr);
+    grid-template-columns: 30px repeat(4, 1fr);
 }
 .table .table-list-row:nth-child(2n){
     background-color: #DDD;
@@ -112,4 +113,14 @@
     padding: 3px;
     display: flex;
     align-items: center;
+}
+
+.button-box{
+    width: 100%;
+    margin-top: 10px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+.button-right{
+    justify-self: right;
 }
