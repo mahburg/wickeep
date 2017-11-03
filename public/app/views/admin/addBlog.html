@@ -9,10 +9,21 @@
         <div class="blog-entry-group">
             <label for="">Content</label>
             <textarea ng-model="content" id="" cols="30" rows="10"></textarea>
+            <br>
             <div class="blog-entry-group">
-                    <label for="">Tags</label>
-                    <input ng-model="tags" type="text" placeholder="example: taxes, loans, accounting practices, services">
-                </div>
+                <label for="">Main Picture</label>
+                <input ng-model="mainPic" type="file">
+            </div>
+            <br>
+            <div class="blog-entry-group">
+                <label for="">Second Picture</label>
+                <input ng-model="secPic" type="file">
+            </div>
+            <br>
+            <div class="blog-entry-group">
+                <label for="">Tags</label>
+                <input ng-model="tags" type="text" placeholder="example: taxes, loans, accounting practices, services">
+            </div>
             <div class="add-blog-buttons">
                 <button ng-click="submit()">Save</button>
                 <button ng-click="submit()">Save and Publish</button>

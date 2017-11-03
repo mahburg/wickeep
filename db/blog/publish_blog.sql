@@ -1,2 +1,2 @@
-UPDATE blogposts SET published = FALSE
+UPDATE blogposts SET published = TRUE
 WHERE id = $1;

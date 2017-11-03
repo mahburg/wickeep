@@ -3,11 +3,6 @@ angular.module('app').controller('adminBlogCtrl', function ($scope, adminSrv) {
     $scope.checkAll = false;
     $scope.checkCount = 0;
 
-    function getBlogs() {
-        adminSrv.getBlogs().then(function (response) {
-            $scope.blogs = response.data
-        })
-    }
     $scope.selectAll = function () {
         let count = $scope.blogs.reduce(function (sum, blog) {
             return blog.selected ? sum + 1 : sum;
@@ -28,7 +23,7 @@ angular.module('app').controller('adminBlogCtrl', function ($scope, adminSrv) {
     }
 
     $scope.delete = function (id) {
-        if (window.confirm("Are you sure you want to DELETE the selected blog posts?")) {
+        if (window.confirm("Are you sure you want to DELETE the selected blog post?")) {
             console.log('delete ' + getSelectedIDs()[0]);
             adminSrv.deleteBlog(getSelectedIDs()[0]).then(function(resp) {
                 getBlogs()
@@ -39,9 +34,10 @@ angular.module('app').controller('adminBlogCtrl', function ($scope, adminSrv) {
         }
     }
     $scope.unpublish = function () {
-        if (window.confirm("Are you sure you want to UNPUBLISH the selected blog posts?")) {
+        if (window.confirm("Are you sure you want to UNPUBLISH the selected blog post(s)?")) {
             adminSrv.unpublishBlogs(getSelectedIDs()).then(function(response) {
                 console.log(response);
+                getBlogs()
             })
         } else {
             console.log('canceled');
@@ -66,6 +62,11 @@ angular.module('app').controller('adminBlogCtrl', function ($scope, adminSrv) {
             return arr
         }, [])
     }
-
+    function getBlogs() {
+        adminSrv.getBlogs().then(function (response) {
+            $scope.blogs = response.data
+            $scope.selectBlog()    
+        })
+    }
     getBlogs()
 });
